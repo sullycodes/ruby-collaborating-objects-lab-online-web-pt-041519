@@ -21,6 +21,3 @@ class Song
    end
 
 end
-
-# Song.new_by_filename("Tom Petty - Refugee")
-# # Artist.find_or_create_by_name("Tom Petty")
