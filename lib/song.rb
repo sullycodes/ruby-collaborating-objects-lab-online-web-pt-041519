@@ -1,9 +1,14 @@
 class Song 
 
-  attr_accessor :name, :artist
+  attr_accessor :name
+  attr_reader :artist
   
   def initialize(name)
     @name = name
+  end
+
+  def artist=(name)
+    self.artist.add_song(name)
   end
 
 # We'll also want to associate that new song with an artist. To do this we'll use a helper method: Song#artist().
@@ -16,7 +21,7 @@ class Song
       song_name = arr[1]
       song = Song.new(song_name)
       song.artist = Artist.find_or_create_by_name(artist_name)
-      song.artist.add_song(song_name)
+      # song.artist.add_song(song_name)
       song
    end
 
