@@ -6,6 +6,11 @@ class Song
     @name = name
   end
 
+  def arist=(name)
+    @artist = artist
+    self.artist
+  end
+
 # We'll also want to associate that new song with an artist. To do this we'll use a helper method: Song#artist().
 # Return the new song instance.
 
@@ -21,6 +26,3 @@ class Song
    end
 
 end
-
-# Song.new_by_filename("Tom Petty - Refugee")
-# # Artist.find_or_create_by_name("Tom Petty")
